@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+*{
+    font-family: 'Spartan', sans-serif;
+}
+:root{
+    --background          : #000000;
+    --background-dark     : #2c1231;
+    --background-very-dark: #2c1231;
+
+
+    --key-color-top       : #ece92f;
+    --key-color-bottom    : #ece92f;
+    --key-background      : #637097;
+    --key-background-dark : #dfd9d2;
+    --key-shadow          : #637097;
+
+    --key-blue-background : #ece92f;
+    --key-blue-shadow     : #404e72;
+
+    --key-red-background  : #d03f2f;
+    --key-red-shadow      : #93261a;
+
+}
+.calc{
+    background-color: var(--background);
+    width: 100vw;
+    height: 100vh;
+}
+.calc-content{  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.calc-top h3{
+    color: var(--key-color-top);
+}
+.calc-top-result input{
+    background-color: var(--background-very-dark); 
+    color: var(--key-color-top);
+    border: none;
+    margin-bottom: 20px;
+    text-align: right;
+    padding: 17px;
+    font-size: 32px;
+    border-radius: 10px;
+}
+.calc-keys{
+    background-color: var(--background-dark);
+    border-radius: 10px;
+    padding: 10px;
+}
+.calc-keys input{
+    background-color: var(--key-background);
+    color: var(--key-color-bottom);
+    border: 2px solid var(--key-background);
+    border-radius: 5px;
+    box-shadow: 1px 1.5px 1px var(--key-shadow);
+    margin: 10px;
+    height: 35px;
+}
+#reset, #del{
+    background-color: var(--key-blue-background);
+    color: #637097;
+    box-shadow: 1px 1.5px 1px var(--key-blue-shadow);
+    border: 2px solid var(--key-blue-background);
+}
+#del{
+    font-size: 13px;
+    padding: 0 3%;
+}
+#equals{
+    background-color: var(--key-red-background);
+    color: var(--key-background);
+    box-shadow: 1px 1.5px 1px var(--key-red-shadow);
+    border: 2px solid var(--key-red-background);
+}
+.calc-keys input:hover{
+    border: 2px solid var(--key-background);
+    color: var(--key-color-top);
+    background-color: hsla(0, 0%, 100%, 0);
+    transition: 0.5s;
+}
+#reset:hover, #del:hover{
+    border: 2px solid var(--key-blue-background);
+    color: var(--key-blue-background);
+    background-color: hsla(0, 0%, 100%, 0);
+    transition: 0.5s;
+}
+#equals:hover{
+    border: 2px solid var(--key-red-background);
+    color: var(--key-red-background);
+    background-color: hsla(0, 0%, 100%, 0);
+    transition: 0.5s;
+}
+.calc-keys input:active{
+    box-shadow: 3px 3px 3px var(--key-shadow);
+    background-color: var(--key-background);
+    color: var(--background);
+}
+#reset:active, #del:active{
+    box-shadow: 3px 3px 3px var(--key-blue-shadow);
+    background-color: var(--key-blue-background);
+    color: var(--key-background);
+}
+#equals:active{
+    box-shadow: 3px 3px 3px var(--key-red-shadow);
+    background-color: var(--key-red-background);
+    color: var(--key-background);
+}
